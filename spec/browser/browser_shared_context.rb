@@ -1,6 +1,10 @@
 shared_context 'browser shared context' do
   before :all do
     @config = SeleniumHelpers::SeleniumConfiguration.instance.config
+
+    @config_iam_sdg_auth_user =  @config['live_community']['iam_auth_user_sdg']
+    @config_iam_sdg_auth_user_password = @config['live_community']['iam_auth_user_sdg_password']
+
     @config_base_url = @config['console']['url']
     @config_remote_ip = @config['console']['remote_ip']
   end
@@ -8,8 +12,9 @@ shared_context 'browser shared context' do
   before :each do
     setup_selenium_driver
 
-    @public_cloud = PageObjects::PublicCloud.new(@driver)
-    @ami_catalog = PageObjects::AMICatalog.new(@driver)
+    @home = PageObjects::Welcome.new(@driver)
+    @sign_in_modal = PageObjects::SignInModal.new(@driver)
+    @register_modal = PageObjects::RegisterModal.new(@driver)
   end
 
   after :each do
@@ -28,18 +33,30 @@ shared_context 'browser shared context' do
     end
 
     if type == 'local'
-      @driver = Selenium::WebDriver.for :firefox
+      profile = Selenium::WebDriver::Firefox::Profile.new
+      profile.add_extension File.join('spec', 'browser','setup','JSErrorCollector.xpi')
+      @driver = Selenium::WebDriver.for :firefox, :profile => profile
       @driver.manage.window.maximize
       @driver.manage.timeouts.implicit_wait = 3
+
     else
       case browser
         when 'chrome' then
           capabilities = Selenium::WebDriver::Remote::Capabilities.chrome
           capabilities.platform = 'Windows 7'
           capabilities.version = '31'
+          capabilities['ignoreProtectedModeSettings'] = true
           capabilities[:name] = "Testing Selenium 2 with Ruby on Sauce and Chrome"
           @driver = Selenium::WebDriver.for(:remote, :desired_capabilities => capabilities, :url => @config_remote_ip)
           @driver.manage.window.maximize
+          @driver.manage.timeouts.implicit_wait = 20
+        when 'iphone' then
+          capabilities = Selenium::WebDriver::Remote::Capabilities.iphone
+          capabilities.platform = 'OS X 10.9'
+          capabilities.version = '7'
+          capabilities['ignoreProtectedModeSettings'] = true
+          capabilities[:name] = "Testing Selenium 2 with Ruby on Sauce and iPhone"
+          @driver = Selenium::WebDriver.for(:remote, :desired_capabilities => capabilities, :url => @config_remote_ip)
           @driver.manage.timeouts.implicit_wait = 20
         when 'firefox' then
           client = Selenium::WebDriver::Remote::Http::Default.new
@@ -48,13 +65,18 @@ shared_context 'browser shared context' do
           profile.add_extension File.join('spec', 'browser','setup','JSErrorCollector.xpi')
 
           capabilities = Selenium::WebDriver::Remote::Capabilities.firefox(:firefox_profile => profile)
-          capabilities.platform = 'Windows 7'
-          capabilities.version = '25'
-          capabilities[:name] = "Testing Selenium 2 with Ruby on Sauce and Firefox"
+          #capabilities = Selenium::WebDriver::Remote::Capabilities.firefox
+          #capabilities.platform = 'Windows 7'
+          #capabilities.version = '26'
+          #capabilities['ignoreProtectedModeSettings'] = true
+          #capabilities[:name] = "Testing Selenium 2 with Ruby on Sauce and Firefox"
 
           @driver = Selenium::WebDriver.for(:remote, :desired_capabilities => capabilities, :http_client => client, :url => @config_remote_ip)
           @driver.manage.window.maximize
           @driver.manage.timeouts.implicit_wait = 10
+        when 'htmlunit' then
+          caps = Selenium::WebDriver::Remote::Capabilities.htmlunit(:javascript_enabled => true)
+          @driver = Selenium::WebDriver.for(:remote, :desired_capabilities => caps, :url => @config_remote_ip)
       end
     end
 
