@@ -1,0 +1,14 @@
+selenium:
+  # Need to change this to values that work for you...
+  chrome_remote_url:
+  firefox_remote_url:
+
+console:
+  url: <%= BrowserSpecUtils.settings[:url] %>
+  remote_ip: <%= BrowserSpecUtils.settings[:remote_ip] %>
+
+
+
+
+
+
