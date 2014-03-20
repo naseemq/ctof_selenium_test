@@ -3,7 +3,7 @@ shared_context 'browser shared context' do
     @config = SeleniumHelpers::SeleniumConfiguration.instance.config
 
     @config_iam_sdg_auth_user = @config['console']['iam_auth_user_sdg']
-    @config_iam_sdg_auth_user_password = @config['console']['iam_auth_user_mtv_password']
+    @config_iam_sdg_auth_user_password = @config['console']['iam_auth_user_sdg_password']
 
     @config_iam_mtv_auth_user = @config['console']['iam_auth_user_mtv']
     @config_iam_mtv_auth_user_password = @config['console']['iam_auth_user_mtv_password']
