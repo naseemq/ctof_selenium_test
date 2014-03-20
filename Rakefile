@@ -14,6 +14,12 @@ require 'spec_helper'
 @type = 'local'
 @browser = 'firefox'
 
+def parseParams
+  parseSuite
+  parseType
+  parseBrowser
+end
+
 def parseSuite
   suite = ENV['suite']
   if suite.present?
@@ -65,16 +71,16 @@ namespace :spec do
     parseParams
     t.pattern = 'spec/browser/*_spec.rb'
 
-    case @suite
-      when 'smoke' then
-        t.rspec_opts = ['--tag suite:smoke', '--tag ~browser:false']
-      when 'test' then
+    if @suite == 'smoke'
+      t.rspec_opts = ['--tag suite:smoke', '--tag ~browser:false']
+    else
+      if @suite == 'test'
         t.rspec_opts = ['--tag suite:test', '--tag ~browser:false']
       else
         t.rspec_opts = ['--tag browser']
+      end
     end
   end
-
   desc 'Run the setup spec in spec/setup/browser'
   RSpec::Core::RakeTask.new(:browser_setup) do |t|
     parseParams

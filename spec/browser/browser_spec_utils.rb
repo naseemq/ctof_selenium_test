@@ -123,5 +123,4 @@ module BrowserSpecUtils
     @sign_in_modal.password = @config_iam_unauth_user_password
     @sign_in_modal.click_submit
   end
-
 end

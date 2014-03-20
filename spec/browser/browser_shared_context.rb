@@ -2,8 +2,8 @@ shared_context 'browser shared context' do
   before :all do
     @config = SeleniumHelpers::SeleniumConfiguration.instance.config
 
-    @config_iam_sdg_auth_user =  @config['live_community']['iam_auth_user_sdg']
-    @config_iam_sdg_auth_user_password = @config['live_community']['iam_auth_user_sdg_password']
+    @config_iam_sdg_auth_user = @config['console']['iam_auth_user_sdg']
+    @config_iam_sdg_auth_user_password = @config['console']['iam_auth_user_sdg_password']
 
     @config_base_url = @config['console']['url']
     @config_remote_ip = @config['console']['remote_ip']
@@ -18,7 +18,7 @@ shared_context 'browser shared context' do
   end
 
   after :each do
-     @driver.quit
+    @driver.quit
   end
 
   def setup_selenium_driver

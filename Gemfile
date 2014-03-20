@@ -14,6 +14,5 @@ gem 'fakeweb', :require => false
 gem 'tinder'
 gem 'hpricot'
 gem 'rspec-instafail'
-gem 'sauce', '3.1.1'
 
 
