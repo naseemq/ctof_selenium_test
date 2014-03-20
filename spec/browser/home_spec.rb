@@ -42,7 +42,7 @@ describe 'Home' do
       sign_in_cmb_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
-      @register_modal.welcome_user.should == 'Welcome Christine!'
+      @register_modal.welcome_user.should == 'Welcome Ashish!'
     end
 
     it 'should sign-in and register edm user', :browser, :suite => 'regression' do
