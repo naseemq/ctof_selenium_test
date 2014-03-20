@@ -7,6 +7,9 @@ console:
   url: <%= BrowserSpecUtils.settings[:url] %>
   remote_ip: <%= BrowserSpecUtils.settings[:remote_ip] %>
 
+  iam_auth_user_sdg: <%= BrowserSpecUtils.settings[:iam_auth_user_sdg] %>
+  iam_auth_user_sdg_password: <%= BrowserSpecUtils.settings[:iam_auth_user_sdg_password] %>
+
 
 
 

@@ -12,12 +12,14 @@ module PageObjects
     end
 
     def username=(value)
+      #puts "Username value: #{value}"
       element = @driver.find_element(:name, 'userId')
       element.clear
       element.send_keys value
     end
 
     def password=(value)
+      #puts "Password: #{value}"
       element = @driver.find_element(:name, 'password')
       element.clear
       element.send_keys value
