@@ -7,7 +7,7 @@ require 'rake'
 require 'builder'
 require 'rubygems'
 require 'rspec/core/rake_task'
-require 'spec_helper'
+require_relative 'spec/spec_helper'
 
 #defaults
 @suite = 'smoke'

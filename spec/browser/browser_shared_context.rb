@@ -3,7 +3,37 @@ shared_context 'browser shared context' do
     @config = SeleniumHelpers::SeleniumConfiguration.instance.config
 
     @config_iam_sdg_auth_user = @config['console']['iam_auth_user_sdg']
-    @config_iam_sdg_auth_user_password = @config['console']['iam_auth_user_sdg_password']
+    @config_iam_sdg_auth_user_password = @config['console']['iam_auth_user_mtv_password']
+
+    @config_iam_mtv_auth_user = @config['console']['iam_auth_user_mtv']
+    @config_iam_mtv_auth_user_password = @config['console']['iam_auth_user_mtv_password']
+
+    @config_iam_ban_auth_user = @config['console']['iam_auth_user_ban']
+    @config_iam_ban_auth_user_password = @config['console']['iam_auth_user_ban_password']
+
+    @config_iam_bur_auth_user = @config['console']['iam_auth_user_bur']
+    @config_iam_bur_auth_user_password = @config['console']['iam_auth_user_bur_password']
+
+    @config_iam_cmb_auth_user = @config['console']['iam_auth_user_cmb']
+    @config_iam_cmb_auth_user_password = @config['console']['iam_auth_user_cmb_password']
+
+    @config_iam_edm_auth_user = @config['console']['iam_auth_user_edm']
+    @config_iam_edm_auth_user_password = @config['console']['iam_auth_user_edm_password']
+
+    @config_iam_mis_auth_user = @config['console']['iam_auth_user_mis']
+    @config_iam_mis_auth_user_password = @config['console']['iam_auth_user_mis_password']
+
+    @config_iam_pln_auth_user = @config['console']['iam_auth_user_pln']
+    @config_iam_pln_auth_user_password = @config['console']['iam_auth_user_pln_password']
+
+    @config_iam_rmt_auth_user = @config['console']['iam_auth_user_rmt']
+    @config_iam_rmt_auth_user_password = @config['console']['iam_auth_user_rmt_password']
+
+    @config_iam_wdh_auth_user = @config['console']['iam_auth_user_wdh']
+    @config_iam_wdh_auth_user_password = @config['console']['iam_auth_user_wdh_password']
+
+    @config_iam_unauth_user = @config['console']['iam_unauth_user']
+    @config_iam_unauth_user_password = @config['console']['iam_unauth_user_password']
 
     @config_base_url = @config['console']['url']
     @config_remote_ip = @config['console']['remote_ip']
