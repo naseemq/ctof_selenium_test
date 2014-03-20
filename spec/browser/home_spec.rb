@@ -17,5 +17,19 @@ describe 'Home' do
       @register_modal.welcome_user.should == 'Welcome Jonathan!'
     end
 
+    it 'should sign-in and register mtv user', :browser, :suite => 'regression' do
+      sign_in_mtv_auth_user
+
+      @register_modal.modal_title.should include 'Register for CTOF 2014'
+      @register_modal.welcome_user.should == 'Welcome Bhushan!'
+    end
+
+    it 'should sign-in and register ban user', :browser, :suite => 'regression' do
+      sign_in_mtv_auth_user
+
+      @register_modal.modal_title.should include 'Register for CTOF 2014'
+      @register_modal.welcome_user.should == 'Welcome Santosh!'
+    end
+
   end
 end

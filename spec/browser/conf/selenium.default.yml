@@ -10,8 +10,32 @@ console:
   iam_auth_user_sdg: <%= BrowserSpecUtils.settings[:iam_auth_user_sdg] %>
   iam_auth_user_sdg_password: <%= BrowserSpecUtils.settings[:iam_auth_user_sdg_password] %>
 
+  iam_auth_user_mtv: <%= BrowserSpecUtils.settings[:iam_auth_user_mtv] %>
+  iam_auth_user_mtv_password: <%= BrowserSpecUtils.settings[:iam_auth_user_mtv_password] %>
 
+  iam_auth_user_ban: <%= BrowserSpecUtils.settings[:iam_auth_user_ban] %>
+  iam_auth_user_ban_password: <%= BrowserSpecUtils.settings[:iam_auth_user_ban_password] %>
 
+  iam_auth_user_bur: <%= BrowserSpecUtils.settings[:iam_auth_user_bur] %>
+  iam_auth_user_bur_password: <%= BrowserSpecUtils.settings[:iam_auth_user_bur_password] %>
 
+  iam_auth_user_cmb: <%= BrowserSpecUtils.settings[:iam_auth_user_cmb] %>
+  iam_auth_user_cmb_password: <%= BrowserSpecUtils.settings[:iam_auth_user_cmb_password] %>
 
+  iam_auth_user_edm: <%= BrowserSpecUtils.settings[:iam_auth_user_edm] %>
+  iam_auth_user_edm_password: <%= BrowserSpecUtils.settings[:iam_auth_user_edm_password] %>
 
+  iam_auth_user_mis: <%= BrowserSpecUtils.settings[:iam_auth_user_mis] %>
+  iam_auth_user_mis_password: <%= BrowserSpecUtils.settings[:iam_auth_user_mis_password] %>
+
+  iam_auth_user_pln: <%= BrowserSpecUtils.settings[:iam_auth_user_pln] %>
+  iam_auth_user_pln_password: <%= BrowserSpecUtils.settings[:iam_auth_user_pln_password] %>
+
+  iam_auth_user_rmt: <%= BrowserSpecUtils.settings[:iam_auth_user_rmt] %>
+  iam_auth_user_rmt_password: <%= BrowserSpecUtils.settings[:iam_auth_user_rmt_password] %>
+
+  iam_auth_user_wdh: <%= BrowserSpecUtils.settings[:iam_auth_user_wdh] %>
+  iam_auth_user_wdh_password: <%= BrowserSpecUtils.settings[:iam_auth_user_wdh_password] %>
+
+  iam_unauth_user: <%= BrowserSpecUtils.settings[:iam_unauth_user] %>
+  iam_unauth_user_password: <%= BrowserSpecUtils.settings[:iam_unauth_user_password] %>
