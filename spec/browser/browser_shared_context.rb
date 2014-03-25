@@ -87,7 +87,7 @@ shared_context 'browser shared context' do
           capabilities['ignoreProtectedModeSettings'] = true
           capabilities[:name] = "Testing Selenium 2 with Ruby on Sauce and iPhone"
           @driver = Selenium::WebDriver.for(:remote, :desired_capabilities => capabilities, :url => @config_remote_ip)
-          @driver.manage.timeouts.implicit_wait = 20
+          @driver.manage.timeouts.implicit_wait = 30
         when 'firefox' then
           client = Selenium::WebDriver::Remote::Http::Default.new
           client.timeout = 500

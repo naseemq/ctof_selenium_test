@@ -58,9 +58,9 @@ def parseBrowser
     when 'chrome' then
     when 'htmlunit' then
     when 'firefox' then
-    when 'ios7' then
+    when 'iphone' then
     else
-      puts 'usage: browser=[chrome, firefox, ios7]'
+      puts 'usage: browser=[chrome, firefox, iphone]'
       exit
   end
 end

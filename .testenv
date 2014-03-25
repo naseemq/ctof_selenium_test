@@ -31,7 +31,7 @@ IAM_AUTH_USER_WDH_PASSWORD=ctof2014
 IAM_UNAUTH_USER=fozkan
 IAM_UNAUTH_USER_PASSWORD=ctof2014
 
-URL=http://ec2-75-101-173-222.compute-1.amazonaws.com/qa/#/landing
+URL=http://ctof-qa.intuitlabs.com/#/landing
 
-REMOTE_IP=http://ctodev_livecommunity:952b4218-9ef5-4cc9-b7ee-b728c73dfb4e@ondemand.saucelabs.com:80/wd/hub
+REMOTE_IP=http://skam1:17b36533-1f82-448c-9758-eb6ac6ec449a@ondemand.saucelabs.com:80/wd/hub
 

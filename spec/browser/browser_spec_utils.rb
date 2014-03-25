@@ -28,7 +28,7 @@ module BrowserSpecUtils
   def sign_in_sdg_auth_user
     @home.start @config_base_url
     @home.click_sign_in
-    @sign_in_modal.modal_title.should include 'Sign In'
+    @sign_in_modal.modal_title.should include 'Welcome!'
     @sign_in_modal.username = @config_iam_sdg_auth_user
     @sign_in_modal.password = @config_iam_sdg_auth_user_password
     @sign_in_modal.click_submit
@@ -37,7 +37,7 @@ module BrowserSpecUtils
   def sign_in_mtv_auth_user
     @home.start @config_base_url
     @home.click_sign_in
-    @sign_in_modal.modal_title.should include 'Sign In'
+    @sign_in_modal.modal_title.should include 'Welcome!'
     @sign_in_modal.username = @config_iam_mtv_auth_user
     @sign_in_modal.password = @config_iam_mtv_auth_user_password
     @sign_in_modal.click_submit
@@ -46,7 +46,7 @@ module BrowserSpecUtils
   def sign_in_ban_auth_user
     @home.start @config_base_url
     @home.click_sign_in
-    @sign_in_modal.modal_title.should include 'Sign In'
+    @sign_in_modal.modal_title.should include 'Welcome!'
     @sign_in_modal.username = @config_iam_ban_auth_user
     @sign_in_modal.password = @config_iam_ban_auth_user_password
     @sign_in_modal.click_submit
@@ -55,7 +55,7 @@ module BrowserSpecUtils
   def sign_in_bur_auth_user
     @home.start @config_base_url
     @home.click_sign_in
-    @sign_in_modal.modal_title.should include 'Sign In'
+    @sign_in_modal.modal_title.should include 'Welcome!'
     @sign_in_modal.username = @config_iam_bur_auth_user
     @sign_in_modal.password = @config_iam_bur_auth_user_password
     @sign_in_modal.click_submit
@@ -64,7 +64,7 @@ module BrowserSpecUtils
   def sign_in_cmb_auth_user
     @home.start @config_base_url
     @home.click_sign_in
-    @sign_in_modal.modal_title.should include 'Sign In'
+    @sign_in_modal.modal_title.should include 'Welcome!'
     @sign_in_modal.username = @config_iam_cmb_auth_user
     @sign_in_modal.password = @config_iam_cmb_auth_user_password
     @sign_in_modal.click_submit
@@ -73,7 +73,7 @@ module BrowserSpecUtils
   def sign_in_edm_auth_user
     @home.start @config_base_url
     @home.click_sign_in
-    @sign_in_modal.modal_title.should include 'Sign In'
+    @sign_in_modal.modal_title.should include 'Welcome!'
     @sign_in_modal.username = @config_iam_edm_auth_user
     @sign_in_modal.password = @config_iam_edm_auth_user_password
     @sign_in_modal.click_submit
@@ -82,7 +82,7 @@ module BrowserSpecUtils
   def sign_in_mis_auth_user
     @home.start @config_base_url
     @home.click_sign_in
-    @sign_in_modal.modal_title.should include 'Sign In'
+    @sign_in_modal.modal_title.should include 'Welcome!'
     @sign_in_modal.username = @config_iam_mis_auth_user
     @sign_in_modal.password = @config_iam_mis_auth_user_password
     @sign_in_modal.click_submit
@@ -91,7 +91,7 @@ module BrowserSpecUtils
   def sign_in_pln_auth_user
     @home.start @config_base_url
     @home.click_sign_in
-    @sign_in_modal.modal_title.should include 'Sign In'
+    @sign_in_modal.modal_title.should include 'Welcome!'
     @sign_in_modal.username = @config_iam_pln_auth_user
     @sign_in_modal.password = @config_iam_pln_auth_user_password
     @sign_in_modal.click_submit
@@ -100,7 +100,7 @@ module BrowserSpecUtils
   def sign_in_rmt_auth_user
     @home.start @config_base_url
     @home.click_sign_in
-    @sign_in_modal.modal_title.should include 'Sign In'
+    @sign_in_modal.modal_title.should include 'Welcome!'
     @sign_in_modal.username = @config_iam_rmt_auth_user
     @sign_in_modal.password = @config_iam_rmt_auth_user_password
     @sign_in_modal.click_submit
@@ -109,7 +109,7 @@ module BrowserSpecUtils
   def sign_in_wdh_auth_user
     @home.start @config_base_url
     @home.click_sign_in
-    @sign_in_modal.modal_title.should include 'Sign In'
+    @sign_in_modal.modal_title.should include 'Welcome!'
     @sign_in_modal.username = @config_iam_wdh_auth_user
     @sign_in_modal.password = @config_iam_wdh_auth_user_password
     @sign_in_modal.click_submit
@@ -118,7 +118,7 @@ module BrowserSpecUtils
   def sign_in_unauth_user
     @home.start @config_base_url
     @home.click_sign_in
-    @sign_in_modal.modal_title.should include 'Sign In'
+    @sign_in_modal.modal_title.should include 'Welcome!'
     @sign_in_modal.username = @config_iam_unauth_user
     @sign_in_modal.password = @config_iam_unauth_user_password
     @sign_in_modal.click_submit
