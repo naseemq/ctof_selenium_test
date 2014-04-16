@@ -238,8 +238,7 @@ describe 'Register' do
     it 'should not allow un-auth user to register', :browser, :suite => 'smoke' do
       sign_in_unauth_user
 
-      @register_modal.modal_title.should include 'CTOF 2014 Registration'
-      @register_modal.welcome_user.should == 'Sorry, Mehmet'
+      @register_modal.unauth_modal_title == 'Sorry, Mehmet'
       @register_modal.uninvited_message.should include 'If you feel you\'ve been inadvertently left off'
     end
   end

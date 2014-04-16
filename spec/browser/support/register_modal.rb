@@ -11,6 +11,10 @@ module PageObjects
       @driver.find_element(:css, 'h3.modal-title').text
     end
 
+    def unauth_modal_title
+      @driver.find_element(:xpath, "//body[@id='ng-app']/div[3]/div/div/form/div[2]/div/div/div/p/strong").text
+    end
+
     def rsvp_confirmation
       sleep 2
       @driver.find_element(:css, 'h4 strong').text
@@ -156,7 +160,7 @@ module PageObjects
     end
 
     def uninvited_message
-      @driver.find_element(:css, 'div.modal-body p').text
+      @driver.find_element(:xpath, "//body[@id='ng-app']/div[3]/div/div/form/div[2]/div/div/div[3]/p").text
     end
 
     def register_sdg_user
@@ -170,7 +174,7 @@ module PageObjects
       select_work_experience('Mostly front end')
       select_coding_experience('Yes')
       click_submit
-      close_registeration_confirmation_modal
+      close_registration_confirmation_modal
     end
 
     def register_mtv_user
@@ -184,7 +188,7 @@ module PageObjects
       select_work_experience('Mostly front end')
       select_coding_experience('Yes')
       click_submit
-      close_registeration_confirmation_modal
+      close_registration_confirmation_modal
     end
 
     def register_ban_user
@@ -199,7 +203,7 @@ module PageObjects
       select_coding_experience('Yes')
       select_commute_service('No')
       click_submit
-      close_registeration_confirmation_modal
+      close_registration_confirmation_modal
     end
 
     def register_bur_user
@@ -211,7 +215,7 @@ module PageObjects
       select_coding_experience('Yes')
       sleep 3
       click_submit
-      close_registeration_confirmation_modal
+      close_registration_confirmation_modal
     end
 
     def register_cmb_user
@@ -224,7 +228,7 @@ module PageObjects
       select_work_experience('Mostly front end')
       select_coding_experience('Yes')
       click_submit
-      close_registeration_confirmation_modal
+      close_registration_confirmation_modal
     end
 
     def register_edm_user
@@ -242,7 +246,7 @@ module PageObjects
       select_coding_experience('Yes')
       click_submit
       rsvp_confirmation.should include("RSVP Received")
-      close_registeration_confirmation_modal
+      close_registration_confirmation_modal
     end
 
     def register_mis_user
@@ -255,7 +259,7 @@ module PageObjects
       select_work_experience('Mostly front end')
       select_coding_experience('Yes')
       click_submit
-      close_registeration_confirmation_modal
+      close_registration_confirmation_modal
     end
 
     def register_pln_user
@@ -268,7 +272,7 @@ module PageObjects
       select_work_experience('Mostly front end')
       select_coding_experience('Yes')
       click_submit
-      close_registeration_confirmation_modal
+      close_registration_confirmation_modal
     end
 
     def register_rmt_user
@@ -279,7 +283,7 @@ module PageObjects
       select_work_experience('Mostly front end')
       select_coding_experience('Yes')
       click_submit
-      close_registeration_confirmation_modal
+      close_registration_confirmation_modal
     end
 
     def register_wdh_user
@@ -292,11 +296,11 @@ module PageObjects
       select_work_experience('Mostly front end')
       select_coding_experience('Yes')
       click_submit
-      close_registeration_confirmation_modal
+      close_registration_confirmation_modal
     end
 
-    def close_registeration_confirmation_modal
-      @driver.find_element(:css, 'div.close button').click
+    def close_registration_confirmation_modal
+      @driver.find_element(:xpath, "(//button[@type='button'])[3]").click
       sleep 3
     end
 
