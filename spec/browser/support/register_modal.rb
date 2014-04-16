@@ -155,5 +155,9 @@ module PageObjects
       @driver.find_element(:xpath, "//body[@id='ng-app']/div[3]/div/div/form/div/div/div/div/div[3]/div/div[5]/button[2]").click
     end
 
+    def uninvited_message
+      @driver.find_element(:css, 'div.modal-body p').text
+    end
+
   end
 end
