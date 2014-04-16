@@ -10,118 +10,237 @@ describe 'Home' do
 
   describe 'Sign-In & Register' do
 
-    it 'should sign-in sdg user', :browser, :suite => 'smoke' do
+    it 'should sign-in sdg user and register yes', :browser, :suite => 'smoke' do
       sign_in_sdg_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
       @register_modal.welcome_user.should == 'Welcome Jonathan!'
       @register_modal.location_label.should == 'San Diego'
+
+      @register_modal.select_attendance('Yes!')
+      @register_modal.select_breakfast('Yes, please')
+      @register_modal.select_lunch('Anything will do')
+      @register_modal.select_evening_party('I\'m going')
+      @register_modal.click_next
+
+      @register_modal.select_work_role('Product Development')
+      @register_modal.select_work_experience('Mostly front end')
+      @register_modal.select_coding_experience('Yes')
+      @register_modal.click_submit
+      @register_modal.rsvp_confirmation.should include("RSVP Received")
+
+      @home.reset_user
     end
 
-    it 'should sign-in and register mtv user', :browser, :suite => 'smoke' do
+    it 'should sign-in sdg user and register no', :browser, :suite => 'smoke' do
+      sign_in_sdg_auth_user
+
+      @register_modal.modal_title.should include 'Register for CTOF 2014'
+      @register_modal.welcome_user.should == 'Welcome Jonathan!'
+      @register_modal.location_label.should == 'San Diego'
+
+      @register_modal.select_attendance('Sorry, can\'t make it')
+      @register_modal.click_submit_decline
+      @register_modal.rsvp_confirmation.should include("RSVP Received")
+
+      @home.reset_user
+    end
+
+    it 'should sign-in mtv user and register', :browser, :suite => 'smoke' do
       sign_in_mtv_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
-      @register_modal.welcome_user.should == 'Welcome Bhushan!'
+      @register_modal.welcome_user.should == 'Welcome Ivan!'
       @register_modal.location_label.should == 'Mountain View'
+
+      @register_modal.select_attendance('Yes!')
+      @register_modal.select_breakfast('Yes, please')
+      @register_modal.select_lunch('Anything will do')
+      @register_modal.select_evening_party('I\'m going')
+      @register_modal.click_next
+
+      @register_modal.select_work_role('Product Development')
+      @register_modal.select_work_experience('Mostly front end')
+      @register_modal.select_coding_experience('Yes')
+      @register_modal.click_submit
+      @register_modal.rsvp_confirmation.should include("RSVP Received")
+
+      @home.reset_user
     end
 
-    it 'should sign-in and register ban user', :browser, :suite => 'smoke' do
+    it 'should sign-in ban user and register', :browser, :suite => 'smoke' do
       sign_in_ban_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
       @register_modal.welcome_user.should == 'Welcome Santosh!'
       @register_modal.location_label.should == 'Bangalore'
+
+      @register_modal.select_attendance('Yes!')
+      @register_modal.select_breakfast('Yes, please')
+      @register_modal.select_lunch('Anything will do')
+      @register_modal.click_next
+
+      @register_modal.select_tshirt_size('Large')
+      @register_modal.select_work_role('Product Development')
+      @register_modal.select_work_experience('Mostly front end')
+      @register_modal.select_coding_experience('Yes')
+      @register_modal.select_commute_service('No')
+      @register_modal.click_submit
+      @register_modal.rsvp_confirmation.should include("RSVP Received")
+
+      @home.reset_user
     end
 
-    it 'should sign-in and register bur user', :browser, :suite => 'smoke' do
+    it 'should sign-in bur user and register', :browser, :suite => 'smoke' do
       sign_in_bur_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
-      @register_modal.welcome_user.should == 'Welcome Xinli!'
+      @register_modal.welcome_user.should == 'Welcome Ananthakrishnan!'
       @register_modal.location_label.should == 'Burlingame'
+
+      @register_modal.select_attendance('Yes!')
+      @register_modal.click_next
+
+      @register_modal.select_work_role('Product Development')
+      @register_modal.select_work_experience('Mostly front end')
+      @register_modal.select_coding_experience('Yes')
+      sleep 3
+      @register_modal.click_submit
+      @register_modal.rsvp_confirmation.should include("RSVP Received")
+
+      @home.reset_user
     end
 
-    it 'should sign-in and register cmb user', :browser, :suite => 'smoke' do
+    it 'should sign-in cmb user and register', :browser, :suite => 'smoke' do
       sign_in_cmb_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
-      @register_modal.welcome_user.should == 'Welcome Ashish!'
+      @register_modal.welcome_user.should == 'Welcome Jeffrey!'
       @register_modal.location_label.should == 'Cambridge'
+
+      @register_modal.select_attendance('Yes!')
+      @register_modal.select_breakfast('Yes, please')
+      @register_modal.select_lunch('Anything will do')
+      @register_modal.click_next
+
+      @register_modal.select_work_role('Product Development')
+      @register_modal.select_work_experience('Mostly front end')
+      @register_modal.select_coding_experience('Yes')
+      @register_modal.click_submit
+      @register_modal.rsvp_confirmation.should include("RSVP Received")
+
+      @home.reset_user
     end
 
-    it 'should sign-in and register edm user', :browser, :suite => 'smoke' do
+    it 'should sign-in edm user and register', :browser, :suite => 'smoke' do
       sign_in_edm_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
       @register_modal.welcome_user.should == 'Welcome Bradley!'
       @register_modal.location_label.should == 'Edmonton'
+
+      @register_modal.select_attendance('Yes!')
+      @register_modal.select_breakfast('Yes, please')
+      @register_modal.select_lunch('Anything will do')
+      @register_modal.click_next
+
+      @register_modal.select_work_role('Product Development')
+      @register_modal.select_work_experience('Mostly front end')
+      @register_modal.select_coding_experience('Yes')
+      @register_modal.click_submit
+      @register_modal.rsvp_confirmation.should include("RSVP Received")
+
+      @home.reset_user
     end
 
-    it 'should sign-in and register mis user', :browser, :suite => 'smoke' do
+    it 'should sign-in mis user and register', :browser, :suite => 'smoke' do
       sign_in_mis_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
-      @register_modal.welcome_user.should == 'Welcome Graham!'
+      @register_modal.welcome_user.should == 'Welcome Ananth!'
       @register_modal.location_label.should == 'Mississauga'
+
+      @register_modal.select_attendance('Yes!')
+      @register_modal.select_breakfast('Yes, please')
+      @register_modal.select_lunch('Anything will do')
+      @register_modal.click_next
+
+      @register_modal.select_work_role('Product Development')
+      @register_modal.select_work_experience('Mostly front end')
+      @register_modal.select_coding_experience('Yes')
+      @register_modal.click_submit
+      @register_modal.rsvp_confirmation.should include("RSVP Received")
+
+      @home.reset_user
     end
 
-    it 'should sign-in and register pln user', :browser, :suite => 'smoke' do
+    it 'should sign-in pln user and register', :browser, :suite => 'smoke' do
       sign_in_pln_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
       @register_modal.welcome_user.should == 'Welcome Mary!'
       @register_modal.location_label.should == 'Plano'
+
+      @register_modal.select_attendance('Yes!')
+      @register_modal.select_breakfast('Yes, please')
+      @register_modal.select_lunch('Anything will do')
+      @register_modal.click_next
+
+      @register_modal.select_work_role('Product Development')
+      @register_modal.select_work_experience('Mostly front end')
+      @register_modal.select_coding_experience('Yes')
+      @register_modal.click_submit
+      @register_modal.rsvp_confirmation.should include("RSVP Received")
+
+      @home.reset_user
     end
 
-    it 'should sign-in and register rmt user', :browser, :suite => 'smoke' do
+    it 'should sign-in rmt user and register', :browser, :suite => 'smoke' do
       sign_in_rmt_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
       @register_modal.welcome_user.should == 'Welcome Alexander!'
       @register_modal.location_label.should == 'Remote'
+
+      @register_modal.select_attendance('Yes!')
+      @register_modal.click_next
+
+      @register_modal.select_work_role('Product Development')
+      @register_modal.select_work_experience('Mostly front end')
+      @register_modal.select_coding_experience('Yes')
+      @register_modal.click_submit
+      @register_modal.rsvp_confirmation.should include("RSVP Received")
+
+      @home.reset_user
     end
 
-    it 'should sign-in and register wdh user', :browser, :suite => 'smoke' do
+    it 'should sign-in wdh user and register', :browser, :suite => 'smoke' do
       sign_in_wdh_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
       @register_modal.welcome_user.should == 'Welcome Tori!'
       @register_modal.location_label.should == 'Woodland Hills'
-    end
-  end
-
-  describe 'Register user' do
-
-    it 'should select attendance:yes for sdg user', :browser, :suite => 'test' do
-      @home.start @config_base_url
-      @home.click_register
-
-      @sign_in_modal.modal_title.should include 'Welcome!'
-      @sign_in_modal.username = @config_iam_sdg_auth_user
-      @sign_in_modal.password = @config_iam_sdg_auth_user_password
-      @sign_in_modal.click_submit
 
       @register_modal.select_attendance('Yes!')
-      sleep 3 #to see what option selected - need to remove later
-      @register_modal.click_submit
-      @register_modal
+      @register_modal.select_breakfast('Yes, please')
+      @register_modal.select_lunch('Anything will do')
+      @register_modal.click_next
 
+      @register_modal.select_work_role('Product Development')
+      @register_modal.select_work_experience('Mostly front end')
+      @register_modal.select_coding_experience('Yes')
+      @register_modal.click_submit
+      @register_modal.rsvp_confirmation.should include("RSVP Received")
+
+      @home.reset_user
     end
 
-    it 'should select attendance:sorry for sdg user', :browser, :suite => 'smoke' do
-      @home.start @config_base_url
-      @home.click_register
+    it 'should not allow un-auth user to register', :browser, :suite => 'smoke' do
+      sign_in_unauth_user
 
-      @sign_in_modal.modal_title.should include 'Welcome!'
-      @sign_in_modal.username = @config_iam_sdg_auth_user
-      @sign_in_modal.password = @config_iam_sdg_auth_user_password
-      @sign_in_modal.click_submit
-
-      @register_modal.select_attendance('Sorry, can\'t make it')
-      sleep 3 #to see what option selected - need to remove later
-      @register_modal.click_submit
+      @register_modal.modal_title.should include 'CTOF 2014 Registration'
+      @register_modal.welcome_user.should == 'Sorry, Mehmet'
+      @register_modal.uninvited_message.should include 'If you feel you\'ve been inadvertently left off'
     end
-
   end
 end

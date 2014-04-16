@@ -45,6 +45,7 @@ shared_context 'browser shared context' do
     @home = PageObjects::Welcome.new(@driver)
     @sign_in_modal = PageObjects::SignInModal.new(@driver)
     @register_modal = PageObjects::RegisterModal.new(@driver)
+    @dashboard = PageObjects::Dashboard.new(@driver)
   end
 
   after :each do

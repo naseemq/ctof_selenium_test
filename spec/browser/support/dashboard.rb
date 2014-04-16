@@ -1,5 +1,5 @@
 module PageObjects
-  class Welcome < BasePage
+  class Dashboard < BasePage
 
     def initialize(driver)
       super()
