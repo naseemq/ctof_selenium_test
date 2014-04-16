@@ -160,10 +160,6 @@ module PageObjects
     end
 
     def register_sdg_user
-      modal_title.should include 'Register for CTOF 2014'
-      welcome_user.should == 'Welcome Jonathan!'
-      location_label.should == 'San Diego'
-
       select_attendance('Yes!')
       select_breakfast('Yes, please')
       select_lunch('Anything will do')
@@ -174,15 +170,10 @@ module PageObjects
       select_work_experience('Mostly front end')
       select_coding_experience('Yes')
       click_submit
-      rsvp_confirmation.should include("RSVP Received")
       close_registeration_confirmation_modal
     end
 
     def register_mtv_user
-      modal_title.should include 'Register for CTOF 2014'
-      welcome_user.should == 'Welcome Ivan!'
-      location_label.should == 'Mountain View'
-
       select_attendance('Yes!')
       select_breakfast('Yes, please')
       select_lunch('Anything will do')
@@ -193,15 +184,10 @@ module PageObjects
       select_work_experience('Mostly front end')
       select_coding_experience('Yes')
       click_submit
-      rsvp_confirmation.should include("RSVP Received")
       close_registeration_confirmation_modal
     end
 
     def register_ban_user
-      modal_title.should include 'Register for CTOF 2014'
-      welcome_user.should == 'Welcome Santosh!'
-      location_label.should == 'Bangalore'
-
       select_attendance('Yes!')
       select_breakfast('Yes, please')
       select_lunch('Anything will do')
@@ -213,15 +199,10 @@ module PageObjects
       select_coding_experience('Yes')
       select_commute_service('No')
       click_submit
-      rsvp_confirmation.should include("RSVP Received")
       close_registeration_confirmation_modal
     end
 
     def register_bur_user
-      modal_title.should include 'Register for CTOF 2014'
-      welcome_user.should == 'Welcome Ananthakrishnan!'
-      location_label.should == 'Burlingame'
-
       select_attendance('Yes!')
       click_next
 
@@ -230,15 +211,10 @@ module PageObjects
       select_coding_experience('Yes')
       sleep 3
       click_submit
-      rsvp_confirmation.should include("RSVP Received")
       close_registeration_confirmation_modal
     end
 
     def register_cmb_user
-      modal_title.should include 'Register for CTOF 2014'
-      welcome_user.should == 'Welcome Jeffrey!'
-      location_label.should == 'Cambridge'
-
       select_attendance('Yes!')
       select_breakfast('Yes, please')
       @register_modal.select_lunch('Anything will do')
@@ -248,7 +224,6 @@ module PageObjects
       select_work_experience('Mostly front end')
       select_coding_experience('Yes')
       click_submit
-      rsvp_confirmation.should include("RSVP Received")
       close_registeration_confirmation_modal
     end
 
@@ -271,10 +246,6 @@ module PageObjects
     end
 
     def register_mis_user
-      modal_title.should include 'Register for CTOF 2014'
-      welcome_user.should == 'Welcome Ananth!'
-      location_label.should == 'Mississauga'
-
       select_attendance('Yes!')
       select_breakfast('Yes, please')
       select_lunch('Anything will do')
@@ -284,15 +255,10 @@ module PageObjects
       select_work_experience('Mostly front end')
       select_coding_experience('Yes')
       click_submit
-      rsvp_confirmation.should include("RSVP Received")
       close_registeration_confirmation_modal
     end
 
     def register_pln_user
-      modal_title.should include 'Register for CTOF 2014'
-      welcome_user.should == 'Welcome Mary!'
-      location_label.should == 'Plano'
-
       select_attendance('Yes!')
       select_breakfast('Yes, please')
       select_lunch('Anything will do')
@@ -302,15 +268,10 @@ module PageObjects
       select_work_experience('Mostly front end')
       select_coding_experience('Yes')
       click_submit
-      rsvp_confirmation.should include("RSVP Received")
       close_registeration_confirmation_modal
     end
 
     def register_rmt_user
-      modal_title.should include 'Register for CTOF 2014'
-      welcome_user.should == 'Welcome Alexander!'
-      location_label.should == 'Remote'
-
       select_attendance('Yes!')
       click_next
 
@@ -318,15 +279,10 @@ module PageObjects
       select_work_experience('Mostly front end')
       select_coding_experience('Yes')
       click_submit
-      rsvp_confirmation.should include("RSVP Received")
       close_registeration_confirmation_modal
     end
 
     def register_wdh_user
-      modal_title.should include 'Register for CTOF 2014'
-      welcome_user.should == 'Welcome Tori!'
-      location_label.should == 'Woodland Hills'
-
       select_attendance('Yes!')
       select_breakfast('Yes, please')
       select_lunch('Anything will do')
@@ -336,7 +292,6 @@ module PageObjects
       select_work_experience('Mostly front end')
       select_coding_experience('Yes')
       click_submit
-      rsvp_confirmation.should include("RSVP Received")
       close_registeration_confirmation_modal
     end
 
