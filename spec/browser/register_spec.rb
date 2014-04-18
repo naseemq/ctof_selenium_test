@@ -32,7 +32,7 @@ describe 'Register' do
       @home.reset_user
     end
 
-    it 'should sign-in sdg user and register no', :browser, :suite => 'regression' do
+    it 'should sign-in sdg user and register no', :browser, :suite => 'smoke' do
       sign_in_sdg_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
