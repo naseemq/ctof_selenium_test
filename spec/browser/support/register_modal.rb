@@ -221,7 +221,7 @@ module PageObjects
     def register_cmb_user
       select_attendance('Yes!')
       select_breakfast('Yes, please')
-      @register_modal.select_lunch('Anything will do')
+      select_lunch('Anything will do')
       click_next
 
       select_work_role('Product Development')
@@ -232,10 +232,6 @@ module PageObjects
     end
 
     def register_edm_user
-      modal_title.should include 'Register for CTOF 2014'
-      welcome_user.should == 'Welcome Bradley!'
-      location_label.should == 'Edmonton'
-
       select_attendance('Yes!')
       select_breakfast('Yes, please')
       select_lunch('Anything will do')
@@ -245,7 +241,6 @@ module PageObjects
       select_work_experience('Mostly front end')
       select_coding_experience('Yes')
       click_submit
-      rsvp_confirmation.should include("RSVP Received")
       close_registration_confirmation_modal
     end
 

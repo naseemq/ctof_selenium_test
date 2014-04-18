@@ -32,7 +32,7 @@ describe 'Register' do
       @home.reset_user
     end
 
-    it 'should sign-in sdg user and register no', :browser, :suite => 'smoke' do
+    it 'should sign-in sdg user and register no', :browser, :suite => 'regression' do
       sign_in_sdg_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
@@ -46,7 +46,7 @@ describe 'Register' do
       @home.reset_user
     end
 
-    it 'should sign-in mtv user and register', :browser, :suite => 'smoke' do
+    it 'should sign-in mtv user and register', :browser, :suite => 'regression' do
       sign_in_mtv_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
@@ -68,7 +68,7 @@ describe 'Register' do
       @home.reset_user
     end
 
-    it 'should sign-in ban user and register', :browser, :suite => 'smoke' do
+    it 'should sign-in ban user and register', :browser, :suite => 'regression' do
       sign_in_ban_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
@@ -91,7 +91,7 @@ describe 'Register' do
       @home.reset_user
     end
 
-    it 'should sign-in bur user and register', :browser, :suite => 'smoke' do
+    it 'should sign-in bur user and register', :browser, :suite => 'regression' do
       sign_in_bur_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
@@ -111,7 +111,7 @@ describe 'Register' do
       @home.reset_user
     end
 
-    it 'should sign-in cmb user and register', :browser, :suite => 'smoke' do
+    it 'should sign-in cmb user and register', :browser, :suite => 'regression' do
       sign_in_cmb_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
@@ -132,7 +132,7 @@ describe 'Register' do
       @home.reset_user
     end
 
-    it 'should sign-in edm user and register', :browser, :suite => 'smoke' do
+    it 'should sign-in edm user and register', :browser, :suite => 'regression' do
       sign_in_edm_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
@@ -153,7 +153,7 @@ describe 'Register' do
       @home.reset_user
     end
 
-    it 'should sign-in mis user and register', :browser, :suite => 'smoke' do
+    it 'should sign-in mis user and register', :browser, :suite => 'regression' do
       sign_in_mis_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
@@ -174,7 +174,7 @@ describe 'Register' do
       @home.reset_user
     end
 
-    it 'should sign-in pln user and register', :browser, :suite => 'smoke' do
+    it 'should sign-in pln user and register', :browser, :suite => 'regression' do
       sign_in_pln_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
@@ -195,7 +195,7 @@ describe 'Register' do
       @home.reset_user
     end
 
-    it 'should sign-in rmt user and register', :browser, :suite => 'smoke' do
+    it 'should sign-in rmt user and register', :browser, :suite => 'regression' do
       sign_in_rmt_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
@@ -214,7 +214,7 @@ describe 'Register' do
       @home.reset_user
     end
 
-    it 'should sign-in wdh user and register', :browser, :suite => 'smoke' do
+    it 'should sign-in wdh user and register', :browser, :suite => 'regression' do
       sign_in_wdh_auth_user
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'

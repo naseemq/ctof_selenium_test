@@ -6,6 +6,10 @@ module PageObjects
       @driver = driver
     end
 
+    def schedule_location
+      @driver.find_element(:css, 'div.container h3.page-header.ng-binding').text
+    end
+
     def schedule_day
       @driver.find_element(:css, 'td.text-center span.dayPickerDate.ng-binding').text
     end
