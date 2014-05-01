@@ -47,6 +47,7 @@ shared_context 'browser shared context' do
     @register_modal = PageObjects::RegisterModal.new(@driver)
     @dashboard = PageObjects::Dashboard.new(@driver)
     @session_details = PageObjects::SessionDetails.new(@driver)
+    @q_and_a_page = PageObjects::SessionDetails.new(@driver)
   end
 
   after :each do
