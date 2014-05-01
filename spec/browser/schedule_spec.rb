@@ -14,15 +14,10 @@ describe 'Home' do
       sign_in_sdg_auth_user
       @register_modal.register_sdg_user
 
-      @dashboard.schedule_location.should == "Your San Diego Schedule"
+      @dashboard.schedule_location.should == "CTOF @ San Diego"
       @dashboard.schedule_day.should == "May 13, 2014"
-      @dashboard.session_name.should == "Keynote"
-      @dashboard.session_time.should include ("9:00:00 AM - 10:00:00 AM PST")
-
-      @dashboard.click_next_day_button
-      @dashboard.schedule_day.should == "May 14, 2014"
-      @dashboard.session_name.should == "Day 2 Sessions"
-      @dashboard.session_time.should include ("9:00:00 AM - 8:00:00 PM PST")
+      @dashboard.session_name.should == "Local Leader Kickoff"
+      @dashboard.session_time.should include ("8:55:00 AM PST\n*Live* in San Diego")
 
       @home.reset_user
     end
@@ -31,15 +26,10 @@ describe 'Home' do
       sign_in_mtv_auth_user
       @register_modal.register_mtv_user
 
-      @dashboard.schedule_location.should == "Your Mountain View Schedule"
+      @dashboard.schedule_location.should == "CTOF @ Mountain View"
       @dashboard.schedule_day.should == "May 13, 2014"
-      @dashboard.session_name.should == "Keynote"
-      @dashboard.session_time.should include ("9:00:00 AM - 10:00:00 AM PST")
-
-      @dashboard.click_next_day_button
-      @dashboard.schedule_day.should == "May 14, 2014"
-      @dashboard.session_name.should == "Day 2 Sessions"
-      @dashboard.session_time.should include ("9:00:00 AM - 8:00:00 PM PST")
+      @dashboard.session_name.should == "Local Leader Kickoff"
+      @dashboard.session_time.should include ("8:55:00 AM PST")
 
       @home.reset_user
     end
@@ -48,15 +38,10 @@ describe 'Home' do
       sign_in_ban_auth_user
       @register_modal.register_ban_user
 
-      @dashboard.schedule_location.should == "Your Bangalore Schedule"
+      @dashboard.schedule_location.should == "CTOF @ Bangalore"
       @dashboard.schedule_day.should == "May 13, 2014"
-      @dashboard.session_name.should == "Keynote"
-      @dashboard.session_time.should include ("9:00:00 AM - 10:00:00 AM PST")
-
-      @dashboard.click_next_day_button
-      @dashboard.schedule_day.should == "May 14, 2014"
-      @dashboard.session_name.should == "Day 2 Sessions"
-      @dashboard.session_time.should include ("9:00:00 AM - 8:00:00 PM PST")
+      @dashboard.session_name.should == "IDC Keynote"
+      @dashboard.session_time.should include ("9:30:00 PM PST")
 
       @home.reset_user
     end
@@ -65,15 +50,10 @@ describe 'Home' do
       sign_in_bur_auth_user
       @register_modal.register_bur_user
 
-      @dashboard.schedule_location.should == "Your Burlingame Schedule"
+      @dashboard.schedule_location.should == "CTOF @ Burlingame"
       @dashboard.schedule_day.should == "May 13, 2014"
-      @dashboard.session_name.should == "Keynote"
-      @dashboard.session_time.should include ("9:00:00 AM - 10:00:00 AM PST")
-
-      @dashboard.click_next_day_button
-      @dashboard.schedule_day.should == "May 14, 2014"
-      @dashboard.session_name.should == "Day 2 Sessions"
-      @dashboard.session_time.should include ("9:00:00 AM - 8:00:00 PM PST")
+      @dashboard.session_name.should == "Local Leader Kickoff"
+      @dashboard.session_time.should include ("8:55:00 AM PST\n*Live* in Grand Ballroom")
 
       @home.reset_user
     end
@@ -82,15 +62,10 @@ describe 'Home' do
       sign_in_cmb_auth_user
       @register_modal.register_cmb_user
 
-      @dashboard.schedule_location.should == "Your Cambridge Schedule"
+      @dashboard.schedule_location.should == "CTOF @ Cambridge"
       @dashboard.schedule_day.should == "May 13, 2014"
-      @dashboard.session_name.should == "Keynote"
-      @dashboard.session_time.should include ("9:00:00 AM - 10:00:00 AM PST")
-
-      @dashboard.click_next_day_button
-      @dashboard.schedule_day.should == "May 14, 2014"
-      @dashboard.session_name.should == "Day 2 Sessions"
-      @dashboard.session_time.should include ("9:00:00 AM - 8:00:00 PM PST")
+      @dashboard.session_name.should == "Lunch"
+      @dashboard.session_time.should include ("8:00:00 AM PST")
 
       @home.reset_user
     end
@@ -99,15 +74,10 @@ describe 'Home' do
       sign_in_edm_auth_user
       @register_modal.register_edm_user
 
-      @dashboard.schedule_location.should == "Your Edmonton Schedule"
+      @dashboard.schedule_location.should == "CTOF @ Edmonton"
       @dashboard.schedule_day.should == "May 13, 2014"
-      @dashboard.session_name.should == "Keynote"
-      @dashboard.session_time.should include ("9:00:00 AM - 10:00:00 AM PST")
-
-      @dashboard.click_next_day_button
-      @dashboard.schedule_day.should == "May 14, 2014"
-      @dashboard.session_name.should == "Day 2 Sessions"
-      @dashboard.session_time.should include ("9:00:00 AM - 8:00:00 PM PST")
+      @dashboard.session_name.should == "Breakfast"
+      @dashboard.session_time.should include ("8:00:00 AM PST")
 
       @home.reset_user
     end
@@ -116,15 +86,10 @@ describe 'Home' do
       sign_in_mis_auth_user
       @register_modal.register_mis_user
 
-      @dashboard.schedule_location.should == "Your Mississauga Schedule"
+      @dashboard.schedule_location.should == "CTOF @ Mississauga"
       @dashboard.schedule_day.should == "May 13, 2014"
-      @dashboard.session_name.should == "Keynote"
-      @dashboard.session_time.should include ("9:00:00 AM - 10:00:00 AM PST")
-
-      @dashboard.click_next_day_button
-      @dashboard.schedule_day.should == "May 14, 2014"
-      @dashboard.session_name.should == "Day 2 Sessions"
-      @dashboard.session_time.should include ("9:00:00 AM - 8:00:00 PM PST")
+      @dashboard.session_name.should == "Lunch"
+      @dashboard.session_time.should include ("8:00:00 AM PST")
 
       @home.reset_user
     end
@@ -133,15 +98,10 @@ describe 'Home' do
       sign_in_pln_auth_user
       @register_modal.register_pln_user
 
-      @dashboard.schedule_location.should == "Your Plano Schedule"
+      @dashboard.schedule_location.should == "CTOF @ Plano"
       @dashboard.schedule_day.should == "May 13, 2014"
-      @dashboard.session_name.should == "Keynote"
-      @dashboard.session_time.should include ("9:00:00 AM - 10:00:00 AM PST")
-
-      @dashboard.click_next_day_button
-      @dashboard.schedule_day.should == "May 14, 2014"
-      @dashboard.session_name.should == "Day 2 Sessions"
-      @dashboard.session_time.should include ("9:00:00 AM - 8:00:00 PM PST")
+      @dashboard.session_name.should == "Local Leader Kickoff"
+      @dashboard.session_time.should include ("8:55:00 AM PST")
 
       @home.reset_user
     end
@@ -150,15 +110,10 @@ describe 'Home' do
       sign_in_rmt_auth_user
       @register_modal.register_rmt_user
 
-      @dashboard.schedule_location.should == "Your Remote Schedule"
+      @dashboard.schedule_location.should == "CTOF @ Remote"
       @dashboard.schedule_day.should == "May 13, 2014"
-      @dashboard.session_name.should == "Keynote"
-      @dashboard.session_time.should include ("9:00:00 AM - 10:00:00 AM PST")
-
-      @dashboard.click_next_day_button
-      @dashboard.schedule_day.should == "May 14, 2014"
-      @dashboard.session_name.should == "Day 2 Sessions"
-      @dashboard.session_time.should include ("9:00:00 AM - 8:00:00 PM PST")
+      @dashboard.session_name.should == "Local Leader Kickoff"
+      @dashboard.session_time.should include ("8:55:00 AM PST")
 
       @home.reset_user
     end
@@ -167,15 +122,10 @@ describe 'Home' do
       sign_in_wdh_auth_user
       @register_modal.register_wdh_user
 
-      @dashboard.schedule_location.should == "Your Woodland Hills Schedule"
+      @dashboard.schedule_location.should == "CTOF @ Woodland Hills"
       @dashboard.schedule_day.should == "May 13, 2014"
-      @dashboard.session_name.should == "Keynote"
-      @dashboard.session_time.should include ("9:00:00 AM - 10:00:00 AM PST")
-
-      @dashboard.click_next_day_button
-      @dashboard.schedule_day.should == "May 14, 2014"
-      @dashboard.session_name.should == "Day 2 Sessions"
-      @dashboard.session_time.should include ("9:00:00 AM - 8:00:00 PM PST")
+      @dashboard.session_name.should == "Local Leader Kickoff"
+      @dashboard.session_time.should include ("8:55:00 AM PST")
 
       @home.reset_user
     end

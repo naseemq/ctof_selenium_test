@@ -15,7 +15,7 @@ module PageObjects
     end
 
     def session_name
-      @driver.find_element(:css, 'h4.list-group-item-heading.ng-binding').text
+      @driver.find_element(:css, 'h5.list-group-item-heading.ng-binding').text
     end
 
     def session_time
