@@ -6,12 +6,16 @@ module PageObjects
       @driver = driver
     end
 
-    def example_method_use_this
-      @driver.find_element(:css, 'div.container h3.page-header.ng-binding').text
+    def session_description
+      @driver.find_element(:css, 'p.ng-binding').text
     end
 
     def click_session_q_and_a
       @driver.find_element(:css, 'i.icon-comment').click
+    end
+
+    def session_title
+      @driver.find_element(:css, 'h4.media-heading.ng-binding').text
     end
 
   end
