@@ -22,6 +22,15 @@ module PageObjects
       @driver.find_element(:css, 'h5.list-group-item-heading.ng-binding').click
     end
 
+    def click_session(session_name)
+      @driver.find_elements(:css, 'h5.list-group-item-heading.ng-binding').each do |session|
+        if session.text.include? session_name
+          session.click
+          break
+        end
+      end
+    end
+
     def session_time
       @driver.find_element(:css, 'p.list-group-item-text.ng-binding').text
     end
