@@ -4,7 +4,7 @@ require_relative 'browser_spec_utils'
 include BrowserSpecUtils
 include ActionView::Helpers::TextHelper
 
-describe 'Home' do
+describe 'Schedule' do
 
   include_context 'browser shared context'
 

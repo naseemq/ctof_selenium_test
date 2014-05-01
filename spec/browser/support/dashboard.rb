@@ -18,6 +18,10 @@ module PageObjects
       @driver.find_element(:css, 'h5.list-group-item-heading.ng-binding').text
     end
 
+    def click_first_session
+      @driver.find_element(:css, 'h5.list-group-item-heading.ng-binding').click
+    end
+
     def session_time
       @driver.find_element(:css, 'p.list-group-item-text.ng-binding').text
     end
