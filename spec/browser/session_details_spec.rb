@@ -14,6 +14,8 @@ describe 'Session Details' do
       sign_in_sdg_auth_user
       @register_modal.register_sdg_user
       @dashboard.click_first_session
+      @session_details.session_title.should == "Local Leader Kickoff"
+      @session_details.session_description.should include ("Bacon ipsum dolor sit amet ham hock sirloin hamburger")
 
       @home.reset_user
     end
@@ -22,6 +24,8 @@ describe 'Session Details' do
       sign_in_mtv_auth_user
       @register_modal.register_mtv_user
       @dashboard.click_first_session
+      @session_details.session_title.should == "Local Leader Kickoff"
+      @session_details.session_description.should include ("Bacon ipsum dolor sit amet ham hock sirloin hamburger")
 
       @home.reset_user
     end
@@ -30,6 +34,8 @@ describe 'Session Details' do
       sign_in_ban_auth_user
       @register_modal.register_ban_user
       @dashboard.click_first_session
+      @session_details.session_title.should == "IDC Keynote"
+      @session_details.session_description.should include ("Details Coming Soon!!")
 
       @home.reset_user
     end
@@ -38,6 +44,8 @@ describe 'Session Details' do
       sign_in_bur_auth_user
       @register_modal.register_bur_user
       @dashboard.click_first_session
+      @session_details.session_title.should == "Local Leader Kickoff"
+      @session_details.session_description.should include ("Bacon ipsum dolor sit amet ham hock sirloin hamburger")
 
       @home.reset_user
     end
@@ -46,6 +54,7 @@ describe 'Session Details' do
       sign_in_cmb_auth_user
       @register_modal.register_cmb_user
       @dashboard.click_first_session
+      @session_details.session_title.should == "Lunch"
 
       @home.reset_user
     end
@@ -54,6 +63,7 @@ describe 'Session Details' do
       sign_in_edm_auth_user
       @register_modal.register_edm_user
       @dashboard.click_first_session
+      @session_details.session_title.should == "Breakfast"
 
       @home.reset_user
     end
@@ -62,6 +72,7 @@ describe 'Session Details' do
       sign_in_mis_auth_user
       @register_modal.register_mis_user
       @dashboard.click_first_session
+      @session_details.session_title.should == "Lunch"
 
       @home.reset_user
     end
@@ -70,6 +81,8 @@ describe 'Session Details' do
       sign_in_pln_auth_user
       @register_modal.register_pln_user
       @dashboard.click_first_session
+      @session_details.session_title.should == "Local Leader Kickoff"
+      @session_details.session_description.should include ("Bacon ipsum dolor sit amet ham hock sirloin hamburger")
 
       @home.reset_user
     end
@@ -78,6 +91,8 @@ describe 'Session Details' do
       sign_in_rmt_auth_user
       @register_modal.register_rmt_user
       @dashboard.click_first_session
+      @session_details.session_title.should == "Local Leader Kickoff"
+      @session_details.session_description.should include ("Bacon ipsum dolor sit amet ham hock sirloin hamburger")
 
       @home.reset_user
     end
@@ -86,6 +101,8 @@ describe 'Session Details' do
       sign_in_wdh_auth_user
       @register_modal.register_wdh_user
       @dashboard.click_first_session
+      @session_details.session_title.should == "Local Leader Kickoff"
+      @session_details.session_description.should include ("Bacon ipsum dolor sit amet ham hock sirloin hamburger")
 
       @home.reset_user
     end
