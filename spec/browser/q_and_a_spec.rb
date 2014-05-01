@@ -8,7 +8,7 @@ describe 'Session Q&A' do
 
   include_context 'browser shared context'
 
-  describe 'View Schedule' do
+  describe 'Q&A page' do
 
     it 'should go to session Q&A page', :browser, :suite => 'test' do
       sign_in_sdg_auth_user
