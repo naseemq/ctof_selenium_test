@@ -7,7 +7,7 @@ module PageObjects
     end
 
     def session_description
-      @driver.find_element(:css, 'p.ng-binding').text
+      @driver.find_element(:xpath, "//*[@id='main-content']/div/div[2]/div/div[2]/div[1]/p[2]").text
     end
 
     def click_session_q_and_a

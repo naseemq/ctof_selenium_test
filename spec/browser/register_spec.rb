@@ -12,6 +12,8 @@ describe 'Register' do
 
     it 'should sign-in sdg user and register yes', :browser, :suite => 'smoke' do
       sign_in_sdg_auth_user
+      @home.reset_user
+      @home.start @config_base_url
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
       @register_modal.welcome_user.should == 'Welcome Jonathan!'
@@ -28,12 +30,12 @@ describe 'Register' do
       @register_modal.select_coding_experience('Yes')
       @register_modal.click_submit
       @register_modal.rsvp_confirmation.should include("RSVP Received")
-
-      @home.reset_user
     end
 
     it 'should sign-in sdg user and register no', :browser, :suite => 'smoke' do
       sign_in_sdg_auth_user
+      @home.reset_user
+      @home.start @config_base_url
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
       @register_modal.welcome_user.should == 'Welcome Jonathan!'
@@ -43,11 +45,12 @@ describe 'Register' do
       @register_modal.click_submit_decline
       @register_modal.rsvp_confirmation.should include("RSVP Received")
 
-      @home.reset_user
     end
 
     it 'should sign-in mtv user and register', :browser, :suite => 'regression' do
       sign_in_mtv_auth_user
+      @home.reset_user
+      @home.start @config_base_url
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
       @register_modal.welcome_user.should == 'Welcome Ivan!'
@@ -64,12 +67,12 @@ describe 'Register' do
       @register_modal.select_coding_experience('Yes')
       @register_modal.click_submit
       @register_modal.rsvp_confirmation.should include("RSVP Received")
-
-      @home.reset_user
     end
 
     it 'should sign-in ban user and register', :browser, :suite => 'regression' do
       sign_in_ban_auth_user
+      @home.reset_user
+      @home.start @config_base_url
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
       @register_modal.welcome_user.should == 'Welcome Santosh!'
@@ -87,12 +90,12 @@ describe 'Register' do
       @register_modal.select_commute_service('No')
       @register_modal.click_submit
       @register_modal.rsvp_confirmation.should include("RSVP Received")
-
-      @home.reset_user
     end
 
     it 'should sign-in bur user and register', :browser, :suite => 'regression' do
       sign_in_bur_auth_user
+      @home.reset_user
+      @home.start @config_base_url
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
       @register_modal.welcome_user.should == 'Welcome Ananthakrishnan!'
@@ -107,12 +110,12 @@ describe 'Register' do
       sleep 3
       @register_modal.click_submit
       @register_modal.rsvp_confirmation.should include("RSVP Received")
-
-      @home.reset_user
     end
 
     it 'should sign-in cmb user and register', :browser, :suite => 'regression' do
       sign_in_cmb_auth_user
+      @home.reset_user
+      @home.start @config_base_url
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
       @register_modal.welcome_user.should == 'Welcome Jeffrey!'
@@ -128,12 +131,12 @@ describe 'Register' do
       @register_modal.select_coding_experience('Yes')
       @register_modal.click_submit
       @register_modal.rsvp_confirmation.should include("RSVP Received")
-
-      @home.reset_user
     end
 
     it 'should sign-in edm user and register', :browser, :suite => 'regression' do
       sign_in_edm_auth_user
+      @home.reset_user
+      @home.start @config_base_url
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
       @register_modal.welcome_user.should == 'Welcome Bradley!'
@@ -149,12 +152,12 @@ describe 'Register' do
       @register_modal.select_coding_experience('Yes')
       @register_modal.click_submit
       @register_modal.rsvp_confirmation.should include("RSVP Received")
-
-      @home.reset_user
     end
 
     it 'should sign-in mis user and register', :browser, :suite => 'regression' do
       sign_in_mis_auth_user
+      @home.reset_user
+      @home.start @config_base_url
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
       @register_modal.welcome_user.should == 'Welcome Ananth!'
@@ -170,15 +173,15 @@ describe 'Register' do
       @register_modal.select_coding_experience('Yes')
       @register_modal.click_submit
       @register_modal.rsvp_confirmation.should include("RSVP Received")
-
-      @home.reset_user
     end
 
     it 'should sign-in pln user and register', :browser, :suite => 'regression' do
       sign_in_pln_auth_user
+      @home.reset_user
+      @home.start @config_base_url
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
-      @register_modal.welcome_user.should == 'Welcome Mary!'
+      @register_modal.welcome_user.should == 'Welcome Aleksandra!'
       @register_modal.location_label.should == 'Plano'
 
       @register_modal.select_attendance('Yes!')
@@ -191,12 +194,12 @@ describe 'Register' do
       @register_modal.select_coding_experience('Yes')
       @register_modal.click_submit
       @register_modal.rsvp_confirmation.should include("RSVP Received")
-
-      @home.reset_user
     end
 
     it 'should sign-in rmt user and register', :browser, :suite => 'regression' do
       sign_in_rmt_auth_user
+      @home.reset_user
+      @home.start @config_base_url
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
       @register_modal.welcome_user.should == 'Welcome Alexander!'
@@ -210,12 +213,12 @@ describe 'Register' do
       @register_modal.select_coding_experience('Yes')
       @register_modal.click_submit
       @register_modal.rsvp_confirmation.should include("RSVP Received")
-
-      @home.reset_user
     end
 
     it 'should sign-in wdh user and register', :browser, :suite => 'regression' do
       sign_in_wdh_auth_user
+      @home.reset_user
+      @home.start @config_base_url
 
       @register_modal.modal_title.should include 'Register for CTOF 2014'
       @register_modal.welcome_user.should == 'Welcome Tori!'
@@ -231,8 +234,6 @@ describe 'Register' do
       @register_modal.select_coding_experience('Yes')
       @register_modal.click_submit
       @register_modal.rsvp_confirmation.should include("RSVP Received")
-
-      @home.reset_user
     end
 
     it 'should not allow un-auth user to register', :browser, :suite => 'smoke' do

@@ -32,7 +32,7 @@ module PageObjects
     end
 
     def session_time
-      @driver.find_element(:css, 'p.list-group-item-text.ng-binding').text
+      @driver.find_element(:css, 'small.ng-binding').text
     end
 
     def click_next_day_button

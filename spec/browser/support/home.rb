@@ -12,7 +12,11 @@ module PageObjects
 
     def reset_user
       #assume user is logged in
-      @driver.navigate.to "https://ctof-qa.intuitlabs.com/ma/api/v1/json/normal/attendee?method=put&confirmation=Unknown"
+      sleep 2
+      #CTOFQA
+      #@driver.navigate.to "https://ctof-qa.intuitlabs.com/ma/api/v1/json/normal/attendee?method=put&confirmation=Unknown"
+      #CTOF PAS QA
+      @driver.navigate.to "https://capen-ctof-3-c-elb-jasnz4rjzmgb-38910632.us-west-2.elb.amazonaws.com/ma/api/v1/json/normal/attendee?method=put&confirmation=Unknown"
     end
 
     def click_sign_in

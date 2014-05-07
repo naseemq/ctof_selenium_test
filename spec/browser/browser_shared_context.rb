@@ -97,12 +97,12 @@ shared_context 'browser shared context' do
           profile = Selenium::WebDriver::Firefox::Profile.new
           profile.add_extension File.join('spec', 'browser','setup','JSErrorCollector.xpi')
 
-          capabilities = Selenium::WebDriver::Remote::Capabilities.firefox(:firefox_profile => profile)
-          #capabilities = Selenium::WebDriver::Remote::Capabilities.firefox
-          #capabilities.platform = 'Windows 7'
-          #capabilities.version = '26'
-          #capabilities['ignoreProtectedModeSettings'] = true
-          #capabilities[:name] = "Testing Selenium 2 with Ruby on Sauce and Firefox"
+          #capabilities = Selenium::WebDriver::Remote::Capabilities.firefox(:firefox_profile => profile)
+          capabilities = Selenium::WebDriver::Remote::Capabilities.firefox
+          capabilities.platform = 'Windows 7'
+          capabilities.version = '29'
+          capabilities['ignoreProtectedModeSettings'] = true
+          capabilities[:name] = "Testing Selenium 2 with Ruby on Sauce and Firefox"
 
           @driver = Selenium::WebDriver.for(:remote, :desired_capabilities => capabilities, :http_client => client, :url => @config_remote_ip)
           @driver.manage.window.maximize
