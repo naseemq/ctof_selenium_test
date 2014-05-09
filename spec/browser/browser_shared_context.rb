@@ -51,6 +51,7 @@ shared_context 'browser shared context' do
     @go_social = PageObjects::GoSocial.new(@driver)
     @speaker_bios = PageObjects::SpeakerBios.new(@driver)
     @exercise_page = PageObjects::ExercisePage.new(@driver)
+    @help_page = PageObjects::HelpPage.new(@driver)
   end
 
   after :each do
