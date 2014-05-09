@@ -30,5 +30,9 @@ module PageObjects
       element.click
     end
 
+    def page_title
+      @driver.title
+    end
+
   end
 end
