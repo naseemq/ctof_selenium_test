@@ -52,6 +52,7 @@ shared_context 'browser shared context' do
     @speaker_bios = PageObjects::SpeakerBios.new(@driver)
     @exercise_page = PageObjects::ExercisePage.new(@driver)
     @help_page = PageObjects::HelpPage.new(@driver)
+    @feedback = PageObjects::Feedback.new(@driver)
   end
 
   after :each do
