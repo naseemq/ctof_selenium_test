@@ -16,7 +16,7 @@ module PageObjects
       #CTOFQA
       #@driver.navigate.to "https://ctof-qa.intuitlabs.com/ma/api/v1/json/normal/attendee?method=put&confirmation=Unknown"
       #CTOF PAS QA
-      @driver.navigate.to "https://capen-ctof-3-c-elb-jasnz4rjzmgb-38910632.us-west-2.elb.amazonaws.com/ma/api/v1/json/normal/attendee?method=put&confirmation=Unknown"
+      @driver.navigate.to "https://ctof-web-qa-ui-elb-ssc04p46kb1p-811078678.us-west-2.elb.amazonaws.com/ma/api/v1/json/normal/attendee?method=put&confirmation=Unknown"
     end
 
     def click_sign_in

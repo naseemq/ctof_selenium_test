@@ -35,7 +35,7 @@ IAM_UNAUTH_USER_PASSWORD=ctof2014
 #URL=http://ctof-qa.intuitlabs.com/#/landing
 
 #CTOF PAS QA
-URL=https://capen-ctof-3-c-elb-jasnz4rjzmgb-38910632.us-west-2.elb.amazonaws.com
+URL=https://ctof-web-qa-ui-elb-ssc04p46kb1p-811078678.us-west-2.elb.amazonaws.com
 
 REMOTE_IP=http://skam1:26ae1dad-a520-4545-b6d5-78589ae886c1@ondemand.saucelabs.com:80/wd/hub
 

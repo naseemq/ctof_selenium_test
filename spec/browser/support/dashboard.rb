@@ -39,5 +39,14 @@ module PageObjects
       @driver.find_element(:css, 'button.btn.btn-default.btn-sm.pull-right').click
     end
 
+    def click_feature(feature_name)
+      @driver.find_elements(:css, 'div.list-group a.list-group-item').each do |feature|
+        if feature.text.include? feature_name
+          feature.click
+          break
+        end
+      end
+    end
+
   end
 end
